@@ -311,6 +311,10 @@ TARGET_BOARD_PLATFORM := taro
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.nothing
+
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
