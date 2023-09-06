@@ -152,9 +152,6 @@ vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio (AGM)
 vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
-vendor/bin/agmcap
-vendor/bin/agmcompressplay
-vendor/bin/agmplay
 vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc
 -vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
