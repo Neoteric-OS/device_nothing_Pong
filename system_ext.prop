@@ -33,9 +33,6 @@ persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
 persist.vendor.data.mode=concurrent
 
-# Radio
-ril.subscription.types=NV,RUIM
-
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
