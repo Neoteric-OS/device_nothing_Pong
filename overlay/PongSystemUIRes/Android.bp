@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "PongSystemUIRes",
+    theme: "PongSystemUIRes",
+    sdk_version: "current",
+    vendor: true,
+}

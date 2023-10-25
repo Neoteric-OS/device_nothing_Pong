@@ -284,22 +284,16 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-# Overlays Lineage
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+PRODUCT_PACKAGES += \
+    PongApertureRes \
+    PongCarrierConfigRes \
+    PongFrameworksRes \
+    PongSettingsProviderRes \
+    PongSettingsRes \
+    PongSystemUIRes \
+    PongWifiRes
 
 DEVICE_PATH := device/nothing/Pong
-
-# Overlays QSSI
-$(call inherit-product, $(DEVICE_PATH)/overlay/qssi/qssi.mk)
-
-# Overlays TARO
-$(call inherit-product, $(DEVICE_PATH)/overlay/taro/taro.mk)
-
-# Overlays PONG
-$(call inherit-product, $(DEVICE_PATH)/overlay/pong/pong.mk)
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
