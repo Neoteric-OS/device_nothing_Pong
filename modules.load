@@ -228,7 +228,6 @@ qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
 qca_cld3_qca6490.ko
-qca_cld3_qca6490.ko
 q6_notifier_dlkm.ko
 spf_core_dlkm.ko
 audpkt_ion_dlkm.ko
