@@ -1,0 +1,18 @@
+#
+# Copyright (C) 2023 Neoteric-OS
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on boot
+    # Fingerprint
+    chown system system /dev/goodix_fp
+
+    # Gestures
+    chown system system /sys/devices/platform/goodix_ts.0/edge_mode
+    chown system system /sys/devices/platform/goodix_ts.0/gesture/fod_en
+    chown system system /sys/devices/platform/goodix_ts.0/gesture/single_en
+
+    write /sys/devices/platform/goodix_ts.0/edge_mode 4
+    write /sys/devices/platform/goodix_ts.0/gesture/fod_en 1
+    write /sys/devices/platform/goodix_ts.0/gesture/single_en 1
