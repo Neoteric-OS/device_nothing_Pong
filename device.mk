@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.vendor_ramdisk \
     init.class_main.sh \
+    init.nt.rc \
     init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.recovery.rc \
