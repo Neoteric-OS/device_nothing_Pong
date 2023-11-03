@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     libbatterylistener \
     libeffectproxy \
     libhapticgenerator \
+    libhfp_pal \
     libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
