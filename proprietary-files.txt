@@ -13,11 +13,19 @@ vendor/etc/acdbdata/waipio_qrd/QRD_workspaceFileXml.qwsp
 
 # ADSP
 vendor/bin/adsprpcd
+vendor/bin/dspservice
+vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsprpc.so
+vendor/lib/libfastcrc.so
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/bm2n00.bin
@@ -114,72 +122,86 @@ vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio
-vendor/etc/models/acd/event.eai
-vendor/etc/models/acd/music.eai
-vendor/etc/models/acd/speech.eai
-vendor/lib/hw/audio.primary.taro.so
+# Audio libraries
+system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
+system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
+vendor/lib/libadm.so
+vendor/lib/libadsprpc.so
 vendor/lib/libar-acdb.so
 vendor/lib/libar-gpr.so
 -vendor/lib/libar-gsl.so
 -vendor/lib/libar-pal.so
 -vendor/lib/libats.so
-vendor/lib/libcapiv2svacnnvendor.so
-vendor/lib/libcapiv2svarnnvendor.so
-vendor/lib/libcapiv2uvvendor.so
+vendor/lib/libaudio_log_utils.so
 vendor/lib/libfmpal.so
-vendor/lib/liblistensoundmodel2vendor.so
 vendor/lib/liblx-ar_util.so
 -vendor/lib/liblx-osal.so
 vendor/lib/libmcs.so
+vendor/lib/libpal_net_if.so
+vendor/lib/libpalclient.so
 vendor/lib/libqtigefar.so
-vendor/lib64/hw/audio.primary.taro.so
-vendor/lib64/hw/sound_trigger.primary.taro.so
-vendor/lib64/lib_lvacfs.so
 vendor/lib64/libadm.so
+vendor/lib64/libadsprpc.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 -vendor/lib64/libar-gsl.so
 -vendor/lib64/libar-pal.so
 -vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libcapiv2svacnnvendor.so
-vendor/lib64/libcapiv2svarnnvendor.so
-vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdsd2pcm.so
-vendor/lib64/libeai_fixed.so
-vendor/lib64/libeai_float.so
 vendor/lib64/libfmpal.so
-vendor/lib64/liblistensoundmodel2vendor.so
-vendor/lib64/liblvacfs_wrapper.so
 vendor/lib64/liblx-ar_util.so
 -vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
+vendor/lib64/libpal_net_if.so
+vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio AGM
 vendor/bin/agmcap
 vendor/bin/agmcompressplay
 vendor/bin/agmplay
-vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
+vendor/bin/cplay
+vendor/lib/libagm_compress_plugin.so
+vendor/lib/libagm_mixer_plugin.so
+vendor/lib/libagm_pcm_plugin.so
 -vendor/lib/libagm.so
+vendor/lib/libagmclient.so
+vendor/lib/libagmmixer.so
 -vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
--vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
+-vendor/lib64/libagm.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
-# Audio FX modules
-vendor/lib64/soundfx/libasphere.so
+# Audio FX Modules
+system_ext/etc/permissions/audiosphere.xml
+system_ext/framework/audiosphere.jar
 vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/soundfx/libqcompostprocbundle.so
+vendor/lib64/soundfx/libqcomvisualizer.so
+vendor/lib64/soundfx/libqcomvoiceprocessing.so
+vendor/lib64/soundfx/libreverbwrapper.so
+vendor/lib64/soundfx/libvisualizer.so
+vendor/lib64/soundfx/libvolumelistener.so
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/libops.so
+vendor/lib/soundfx/libshoebox.so
+vendor/lib/soundfx/libqcompostprocbundle.so
+vendor/lib/soundfx/libqcomvisualizer.so
+vendor/lib/soundfx/libqcomvoiceprocessing.so
+vendor/lib/soundfx/libreverbwrapper.so
+vendor/lib/soundfx/libvisualizer.so
+vendor/lib/soundfx/libvolumelistener.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/libops.so
+
+# Audio misc
+vendor/etc/models/acd/event.eai
+vendor/etc/models/acd/music.eai
+vendor/etc/models/acd/speech.eai
 
 # Audio firmware
 vendor/firmware/stereo.cnt
@@ -840,13 +862,6 @@ vendor/lib64/vendor.libdpmtcm.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
-# DSP
-vendor/bin/dspservice
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-vendor/lib/vendor.qti.hardware.dsp@1.0.so
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so
-
 # EVA
 vendor/etc/eva/facedetection/model3.dat
 vendor/lib64/libcvp2_1.so
@@ -1199,6 +1214,21 @@ vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
+
+# Listen
+vendor/etc/vintf/manifest/manifest_non_qmaa.xml
+vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
+vendor/lib/hw/sound_trigger.primary.taro.so
+vendor/lib/libeai_fixed_32.so
+vendor/lib/liblistensoundmodel2vendor.so
+vendor/lib/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
+vendor/lib/vendor.qti.hardware.ListenSoundModel@1.0.so
+vendor/lib64/hw/sound_trigger.primary.taro.so
+vendor/lib64/libeai_fixed.so
+vendor/lib64/libeai_float.so
+vendor/lib64/liblistensoundmodel2vendor.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 
 # Media
 system_ext/lib64/libmmosal.so
