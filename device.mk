@@ -42,20 +42,33 @@ PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
 # Audio
+SOONG_CONFIG_NAMESPACES += android_hardware_audio
+SOONG_CONFIG_android_hardware_audio += \
+    run_64bit
+SOONG_CONFIG_android_hardware_audio_run_64bit := true
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.service_64 \
-    android.hardware.audio.service_64.rc \
-    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl
+
+PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.taro \
     audio.r_submix.default \
-    audio.usb.default \
+    audio.usb.default 
+
+PRODUCT_PACKAGES += \
     audioadsprpcd \
+    libaudiopreprocessing \
     libbatterylistener \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
     libeffectproxy \
-    libhapticgenerator \
     libhfp_pal \
     libldnhncr \
     libqcompostprocbundle \
