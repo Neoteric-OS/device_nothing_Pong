@@ -931,13 +931,6 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 
-# ESE
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
 -vendor/lib64/libfastcvopt.so
@@ -1309,29 +1302,6 @@ vendor/lib64/libQnnHtpV69Stub.so
 vendor/lib64/libQnnSaver.so
 vendor/lib64/libQnnSystem.so
 vendor/lib64/libhta_hexagon_runtime_qnn.so
-
-# NFC
-system/framework/com.nxp.nfc.jar
-vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
-vendor/etc/init/android.hardware.nfc_snxxx@1.2-service.rc
-vendor/etc/init/init.Pong.nfc.rc
-vendor/etc/init/init.Pong.se.rc
-vendor/etc/permissions/com.nxp.nfc.xml
-vendor/lib64/jcos_client.so
-vendor/lib64/libchrome.so
-vendor/lib64/ls_client.so
-vendor/lib64/nfc_nci_nxp_snxxx.so
-vendor/lib64/se_extn_client.so
-vendor/lib64/vendor.nxp.nxpese@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so
-vendor/libnfc-nxp_RF.conf
-
-# NFC configs
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
-
-# NFC firmware
-vendor/lib64/libpn560_fw.so
 
 # OMX
 vendor/lib64/libAlacSwDec.so
