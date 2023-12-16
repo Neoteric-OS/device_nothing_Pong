@@ -203,7 +203,6 @@ simulated_ntc.ko
 slimbus.ko
 slim-qcom-ngd-ctrl.ko
 hwmon.ko
-qti_amoled_ecm.ko
 coresight.ko
 coresight-tmc.ko
 coresight-funnel.ko
