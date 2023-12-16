@@ -101,7 +101,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_SOURCE := kernel/nothing/sm8475
-TARGET_KERNEL_CONFIG := vendor/meteoric_defconfig
+TARGET_KERNEL_CONFIG := vendor/meteoric_defconfig ksu.config
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 KERNEL_LTO := none
 
