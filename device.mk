@@ -346,7 +346,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     overlay \
     perf \
-    telephony
+    telephony \
+    wfd
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -376,8 +377,7 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    kernel/nothing/sm8475
+    $(LOCAL_PATH)
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -444,11 +444,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
     libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/nothing/Pong/Pong-vendor.mk)
