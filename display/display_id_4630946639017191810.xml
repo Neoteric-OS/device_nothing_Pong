@@ -3,7 +3,7 @@
     <!-- Global Brightness-Nit mapping -->
     <screenBrightnessMap>
         <point>
-            <value>0.04</value>
+            <value>0.0373626373626</value> <!-- 153/4095 -->
             <nits>2.0</nits>
         </point>
         <point>
