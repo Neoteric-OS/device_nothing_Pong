@@ -35,3 +35,7 @@ on boot
     chmod 0666 /sys/devices/platform/soc/994000.i2c/i2c-0/0-003a/leds/led_strips/single_brightness
     chown system system /sys/devices/platform/soc/994000.i2c/i2c-0/0-003a/leds/led_strips/frame_brightness
     chmod 0666 /sys/devices/platform/soc/994000.i2c/i2c-0/0-003a/leds/led_strips/frame_brightness
+
+on property:sys.boot_completed=1
+    chown system system /sys/class/qcom-battery/wireless_boost_en
+    chown system system /sys/class/qcom-battery/wls_reverse_status
