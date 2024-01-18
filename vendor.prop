@@ -2,6 +2,10 @@
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.vendor.audio.downmix.attenuation=1
 
+# Biometrics
+ro.vendor.fingerprint.type=udfps_optical
+ro.vendor.fingerprint.sensor_location=540|2186|93
+
 # Bluetooth
 bluetooth.device.default_name=Nothing Phone (2)
 bluetooth.hardware.power.idle_cur_ma=6
