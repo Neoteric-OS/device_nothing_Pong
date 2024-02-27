@@ -11,8 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from Pong device
 $(call inherit-product, device/nothing/Pong/device.mk)
 
-# Inherit from the Neoteric configuration.
-$(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
+# Inherit from the AOSPA configuration.
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 PRODUCT_NAME := Pong
 PRODUCT_DEVICE := Pong
