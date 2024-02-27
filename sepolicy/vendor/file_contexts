@@ -1,7 +1,6 @@
 # Devices
 /dev/goodix_fp                                                                                     u:object_r:fingerprint_device:s0
 /dev/pn553                                                                                         u:object_r:nfc_device:s0
-/dev/nxp-nci                                                                                       u:object_r:nfc_device:s0
 
 # Fingerprint
 /data/vendor/goodix(/.*)?                                                                          u:object_r:fingerprint_vendor_data_file:s0
