@@ -21,5 +21,5 @@
     <overlay
       android:targetPackage="org.lineageos.aperture"
       android:isStatic="true"
-      android:priority="800"/>
+      android:priority="900"/>
 </manifest>
