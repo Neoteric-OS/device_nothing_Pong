@@ -4,11 +4,11 @@
     <screenBrightnessMap>
         <point>
             <value>0.035433073</value> <!-- 144/4080 -->
-            <nits>2.0</nits>
+            <nits>2.0487</nits>
         </point>
         <point>
             <value>0.8615196078431</value> <!-- 3515/4080 -->
-            <nits>498.0</nits>
+            <nits>427.6287</nits>
         </point>
         <point>
             <value>1.0</value>
