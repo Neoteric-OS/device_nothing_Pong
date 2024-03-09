@@ -1,6 +1,4 @@
 runtime_resource_overlay {
     name: "PongFrameworksRes",
-    theme: "PongFrameworksRes",
-    sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }

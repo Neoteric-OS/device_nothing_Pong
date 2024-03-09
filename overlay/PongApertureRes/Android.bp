@@ -1,6 +1,4 @@
 runtime_resource_overlay {
     name: "PongApertureRes",
-    theme: "PongApertureRes",
-    sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }

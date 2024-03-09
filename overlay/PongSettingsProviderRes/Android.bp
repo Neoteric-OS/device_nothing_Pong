@@ -1,6 +1,4 @@
 runtime_resource_overlay {
     name: "PongSettingsProviderRes",
-    theme: "PongSettingsProviderRes",
-    sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }

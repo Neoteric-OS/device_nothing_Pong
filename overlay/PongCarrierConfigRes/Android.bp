@@ -1,7 +1,5 @@
 runtime_resource_overlay {
     name: "PongCarrierConfigRes",
-    theme: "PongCarrierConfigRes",
-    sdk_version: "current",
     product_specific: true,
     aaptflags: ["--keep-raw-values"],
 }
