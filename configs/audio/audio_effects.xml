@@ -44,8 +44,8 @@
         <library name="dap_sw" path="libswdap.so"/>
         <library name="dap_hw" path="libhwdap.so"/>
         <!--DOLBY END-->
-        <!--DOLBY VQE-->
-        <library name="vqe" path="libswvqe.so"/>
+        <!--DOLBY GAME-->
+        <library name="gamedap" path="libswgamedap.so"/>
         <!--DOLBY END-->
     </libraries>
     <effects>
@@ -100,8 +100,8 @@
             <libhw library="dap_hw" uuid="a0c30891-8246-4aef-b8ad-d53e26da0253"/>
         </effectProxy>
         <!--DOLBY END-->
-        <!--DOLBY VQE-->
-        <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
+        <!--DOLBY GAME-->
+        <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
         <!--DOLBY END-->
     </effects>
     <postprocess>
