@@ -1,4 +1,4 @@
 runtime_resource_overlay {
     name: "PongSystemUIRes",
-    product_specific: true,
+    system_ext_specific: true,
 }
