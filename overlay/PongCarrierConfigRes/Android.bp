@@ -1,5 +1,5 @@
 runtime_resource_overlay {
     name: "PongCarrierConfigRes",
-    product_specific: true,
+    system_ext_specific: true,
     aaptflags: ["--keep-raw-values"],
 }
