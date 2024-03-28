@@ -21,8 +21,11 @@
 #include <hardware/hardware.h>
 #include "BiometricsFingerprint.h"
 
+#include <android-base/file.h>
 #include <inttypes.h>
 #include <unistd.h>
+
+#define FOD_HBM_PATH "/sys/panel_feature/hbm_mode"
 
 namespace android {
 namespace hardware {
@@ -30,6 +33,10 @@ namespace biometrics {
 namespace fingerprint {
 namespace V2_3 {
 namespace implementation {
+
+void setFodHbm(bool status) {
+    android::base::WriteStringToFile(status ? "1" : "0", FOD_HBM_PATH);
+}
 
 // Supported fingerprint HAL version
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
@@ -162,6 +169,7 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
 }
 
 Return<uint64_t> BiometricsFingerprint::preEnroll() {
+    setFodHbm(true);
     return mDevice->pre_enroll(mDevice);
 }
 
@@ -172,6 +180,7 @@ Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
+    setFodHbm(false);
     getInstance()->onFingerUp();
     return ErrorFilter(mDevice->post_enroll(mDevice));
 }
@@ -181,6 +190,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    setFodHbm(false);
     getInstance()->onFingerUp();
     return ErrorFilter(mDevice->cancel(mDevice));
 }
@@ -207,6 +217,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 }
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId, uint32_t gid) {
+    setFodHbm(true);
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
 
@@ -277,6 +288,8 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
             if (!thisPtr->mClientCallback->onError(devId, result, vendorCode).isOk()) {
                 ALOGE("failed to invoke fingerprint onError callback");
             }
+            setFodHbm(false);
+            getInstance()->onFingerUp();
         } break;
         case FINGERPRINT_ACQUIRED: {
             int32_t vendorCode = 0;
@@ -322,6 +335,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
                              .isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
                 }
+                setFodHbm(false);
                 getInstance()->onFingerUp();
             } else {
                 // Not a recognized fingerprint
