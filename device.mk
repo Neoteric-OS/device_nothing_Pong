@@ -1,4 +1,4 @@
-DEVICE_PATH := device/nothing/phone2
+DEVICE_PATH := device/nothing/Pong
 
 # A/B
 ENABLE_VIRTUAL_AB := true
@@ -142,7 +142,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.nt.rc \
     init.target.rc \
-    ueventd.phone2.rc
+    ueventd.Pong.rc
 
 # Keymaster
 PRODUCT_COPY_FILES += \
@@ -168,10 +168,10 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # Manifests
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/phone2_vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/Pong_vendor_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/manifest_cape.xml \
-    $(DEVICE_PATH)/configs/vintf/manifest_phone2.xml
+    $(DEVICE_PATH)/configs/vintf/manifest_Pong.xml
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -214,12 +214,12 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    Phone2CarrierConfig \
-    Phone2Frameworks \
-    Phone2Nfc \
-    Phone2Settings \
-    Phone2SettingsProvider \
-    Phone2SystemUI
+    PongCarrierConfig \
+    PongFrameworks \
+    PongNfc \
+    PongSettings \
+    PongSettingsProvider \
+    PongSystemUI
 
 # Paranoid Glyph
 PRODUCT_PACKAGES += \
@@ -282,7 +282,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.1-service.phone2-multihal \
+    android.hardware.sensors@2.1-service.nt-multihal \
     libsensorndkbridge \
     sensors.nothing
 
@@ -322,4 +322,4 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
 
 # Vendor Makefile
-$(call inherit-product, vendor/nothing/phone2/phone2-vendor.mk)
+$(call inherit-product, vendor/nothing/Pong/Pong-vendor.mk)

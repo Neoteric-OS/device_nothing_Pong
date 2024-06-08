@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=phone2
+DEVICE=Pong
 VENDOR=nothing
 
 # Load extract_utils and do some sanity checks

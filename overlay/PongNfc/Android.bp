@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "Phone2SettingsProvider",
+    name: "PongNfc",
     device_specific: true,
 }

@@ -19,8 +19,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.phone2.rc",
+    name: "ueventd.Pong.rc",
     filename: "ueventd.rc",
-    src: "ueventd.phone2.rc",
+    src: "ueventd.Pong.rc",
     device_specific: true,
 }

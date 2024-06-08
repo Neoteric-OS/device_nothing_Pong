@@ -146,4 +146,4 @@ SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # Vendor BoardConfig
-include vendor/nothing/phone2/BoardConfigVendor.mk
+include vendor/nothing/Pong/BoardConfigVendor.mk
