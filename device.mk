@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.7.vendor \
     libcamera2ndk_vendor \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    libyuv.vendor \
     vendor.qti.hardware.camera.aon@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -250,7 +254,10 @@ ENABLE_VENDOR_IMAGE := true
 PRODUCT_PACKAGES += \
     qrtr-ns \
     qrtr-lookup \
-    libqrtr
+    libqrtr \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
 
 # QTI Components
 TARGET_USES_QCOM_COMMON_SEPOLICY := true
@@ -327,6 +334,10 @@ PRODUCT_PACKAGES += \
 # WLAN
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libpng.vendor
 
 # Vendor Makefile
 $(call inherit-product, vendor/nothing/Pong/Pong-vendor.mk)
