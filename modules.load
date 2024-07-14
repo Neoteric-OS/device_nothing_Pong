@@ -14,13 +14,9 @@ pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
 pci-msm-drv.ko
 camcc-waipio.ko
-camcc-diwali.ko
-debugcc-diwali.ko
 videocc-waipio.ko
 gpucc-waipio.ko
 debugcc-waipio.ko
-gpucc-diwali.ko
-videocc-diwali.ko
 bam_dma.ko
 gpi.ko
 pci-edma.ko
