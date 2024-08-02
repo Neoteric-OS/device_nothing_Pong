@@ -452,4 +452,9 @@
         <item>10</item>
     </integer-array>
 
+    <!-- The number of volume steps for the notification stream -->
+    <integer name="config_audio_notif_vol_steps">16</integer>
+
+    <!-- The number of volume steps for the ring stream -->
+    <integer name="config_audio_ring_vol_steps">16</integer>
 </resources>
