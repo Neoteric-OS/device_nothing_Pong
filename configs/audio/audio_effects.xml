@@ -42,6 +42,7 @@
         <library name="audiosphere" path="libasphere.so"/>
         <!--DOLBY DAP-->
         <library name="dap" path="libswdap.so"/>
+        <library name="dvl" path="libdlbvol.so"/>
         <!--DOLBY GAME-->
         <library name="gamedap" path="libswgamedap.so"/>
         <!--DOLBY VQE-->
@@ -95,12 +96,16 @@
         <effect name="audiosphere" library="audiosphere" uuid="184e62ab-2d19-4364-9d1b-c0a40733866c"/>
         <!--DOLBY DAP-->
         <effect name="dap" library="dap" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa"/>
+        <effect name="dlb_music_listener" library="dvl" uuid="40f66c8b-5aa5-4345-8919-53ec431aaa98"/>
         <!--DOLBY GAME-->
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
         <!--DOLBY VQE-->
         <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
     </effects>
     <postprocess>
+        <stream type="music">
+            <apply effect="dlb_music_listener"/>
+        </stream>
         <stream type="voice_call">
             <apply effect="voice_helper"/>
         </stream>
