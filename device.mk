@@ -68,6 +68,9 @@ PRODUCT_PACKAGES += \
 
 TARGET_USES_FOD_ZPOS := true
 
+# Bluetooth
+TARGET_USE_AIDL_QTI_BT_AUDIO := true
+
 # Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
