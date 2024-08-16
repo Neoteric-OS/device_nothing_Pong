@@ -3,6 +3,7 @@ persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.vendor.audio.downmix.attenuation=1
 
 # Bluetooth
+bluetooth.device.default_name=Nothing Phone (2)
 bluetooth.hardware.power.idle_cur_ma=6
 bluetooth.hardware.power.operating_voltage_mv=3700
 bluetooth.hardware.power.rx_cur_ma=28
