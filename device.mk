@@ -148,25 +148,13 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+    $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    fstab.qcom.vendor_ramdisk \
-    init.class_main.sh \
-    init.kernel.post_boot-cape.sh \
-    init.kernel.post_boot.sh \
     init.nt.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.rc \
-    init.qcom.recovery.rc \
-    init.qcom.sh \
-    init.qti.kernel.rc \
-    init.qti.kernel.sh \
-    init.qti.write.sh \
     init.target.rc \
-    ueventd.qcom.rc \
-    vendor_modprobe.sh
+    ueventd.Pong.rc
 
 # Keymaster
 PRODUCT_COPY_FILES += \
@@ -280,6 +268,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     display \
     gps \
+    init \
     media \
     overlay \
     perf \
