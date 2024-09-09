@@ -1,2 +1,5 @@
 # OTG Switch
 type proc_otg_switch, file_type;
+
+# Powershare
+type sysfs_wls_boost, fs_type, sysfs_type;
