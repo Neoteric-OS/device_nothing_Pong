@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/Pong.mk
+    $(LOCAL_DIR)/yaap_Pong.mk
