@@ -253,6 +253,7 @@ PRODUCT_PACKAGES += \
     libqrtr
 
 # QTI Components
+TARGET_USES_QCOM_COMMON_SEPOLICY := true
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     alarm \
