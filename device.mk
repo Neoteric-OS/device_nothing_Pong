@@ -212,6 +212,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2.vendor \
     android.hardware.nfc@1.0-impl:64 \
+    libevent.vendor \
     NfcNci \
     Tag
 
