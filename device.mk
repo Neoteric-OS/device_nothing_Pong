@@ -148,6 +148,9 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
+PRODUCT_PACKAGES += \
+    libhidlbase_shim
+
 # Identity
 PRODUCT_PACKAGES += \
     android.hardware.identity-V3-ndk_platform.vendor
