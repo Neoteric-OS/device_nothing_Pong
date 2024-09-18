@@ -44,7 +44,7 @@ TARGET_BOARD_PLATFORM := taro
 TARGET_BOOTLOADER_BOARD_NAME := taro
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -343,4 +343,4 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
 
 # Vendor Makefile
-$(call inherit-product, vendor/nothing/Pong/Pong-vendor.mk)
+$(call inherit-product-if-exists, vendor/nothing/Pong/Pong-vendor.mk)
