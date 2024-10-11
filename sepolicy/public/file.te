@@ -1,2 +1,5 @@
 # OTG Switch
 type proc_otg_switch, file_type;
+
+# Charging control
+type nt_chg_recovery, domain, mlstrustedobject, coredomain;
