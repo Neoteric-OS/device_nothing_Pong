@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/qcom/opensource/healthd-ext/health-vendor-product.mk)
 
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0.vendor \
     android.hardware.health@2.1.vendor
 
 # Identity
@@ -327,8 +326,7 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.nt \
-    android.hardware.vibrator-V2-ndk_platform.vendor
+    vendor.qti.hardware.vibrator.service.nt
 
 # WLAN
 PRODUCT_COPY_FILES += \
