@@ -65,6 +65,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.nothing
 
+SOONG_CONFIG_qtidisplay_udfps := true
 TARGET_USES_FOD_ZPOS := true
 
 # Bluetooth
