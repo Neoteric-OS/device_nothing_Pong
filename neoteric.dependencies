@@ -12,10 +12,10 @@
         "revision":     "vic"
     },
     {
-        "remote":       "github",
-        "repository":   "HELLBOY017/hardware_qcom_audio",
+        "remote":       "neoteric",
+        "repository":   "hardware_qcom_audio",
         "target_path":  "hardware/qcom-caf/sm8450/audio/primary-hal",
-        "revision":     "lineage-21-sm8450"
+        "revision":     "vic-8450"
     },
     {
         "remote":       "github",
