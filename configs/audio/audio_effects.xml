@@ -103,9 +103,6 @@
         <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
     </effects>
     <postprocess>
-        <stream type="music">
-            <apply effect="dlb_music_listener"/>
-        </stream>
         <stream type="voice_call">
             <apply effect="voice_helper"/>
         </stream>
