@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.4.vendor \
-    libcrypto_shim
+    libcrypto_shim.vendor
 
 # Emulated Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
