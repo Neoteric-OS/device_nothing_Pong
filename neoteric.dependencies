@@ -25,9 +25,9 @@
     },
     {
         "remote":       "neoteric",
-        "repository":   "hardware_qcom_display",
+        "repository":   "android_hardware_qcom_display",
         "target_path":  "hardware/qcom-caf/sm8450/display",
-        "revision":     "lineage-21.0-caf-sm8450"
+        "revision":     "vic-8450"
     },
     {
         "remote":       "aospa",
