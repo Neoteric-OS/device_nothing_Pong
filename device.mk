@@ -257,7 +257,7 @@ PRODUCT_PACKAGES += \
 
 # Powershare
 PRODUCT_PACKAGES += \
-    vendor.aospa.powershare-service
+    vendor.lineage.powershare-service
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
