@@ -226,6 +226,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    aptxalsOverlay \
     PongAperture \
     PongCarrierConfig \
     PongFrameworks \
