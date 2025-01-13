@@ -18,10 +18,22 @@
         "revision":     "vic-8450"
     },
     {
-        "remote":       "github",
-        "repository":   "LineageOS/android_vendor_qcom_opensource_arpal-lx",
+        "remote":       "neoteric",
+        "repository":   "android_vendor_qcom_opensource_arpal-lx",
         "target_path":  "hardware/qcom-caf/sm8450/audio/pal",
-        "revision":     "lineage-21.0-caf-sm8450"
+        "revision":     "vic-8450"
+    },
+    {
+        "remote":       "neoteric",
+        "repository":   "android_vendor_qcom_opensource_agm",
+        "target_path":  "hardware/qcom-caf/sm8450/audio/agm",
+        "revision":     "vic-8450"
+    },
+    {
+        "remote":       "neoteric",
+        "repository":   "android_vendor_qcom_opensource_audioreach-graphservices",
+        "target_path":  "hardware/qcom-caf/sm8450/audio/graphservices",
+        "revision":     "vic-8450"
     },
     {
         "remote":       "neoteric",

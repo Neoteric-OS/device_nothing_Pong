@@ -1,5 +1,5 @@
 #
-# # Copyright (C) 2023 Neoteric OS
+# Copyright (C) 2023 Neoteric OS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
