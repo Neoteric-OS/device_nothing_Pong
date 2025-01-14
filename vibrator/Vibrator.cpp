@@ -431,8 +431,8 @@ int LedVibratorDevice::setAmplitude(float amplitude) {
         ret |= write_value(LED_DEVICE "/brightness", "1");
     } else if (mTimeoutMs < 101) {
         gain = 4 + 2.5*mTimeoutMs;
-        if (gain > 128)
-            gain = 128;             // 0x80 (Should never exceed this)
+        if (gain > 153)
+            gain = 153;             // (Should never exceed this)
         ret |= write_value(LED_DEVICE "/index", "1");
         ret |= write_value(LED_DEVICE "/loop", "0 0");
         ret |= write_value(LED_DEVICE "/vmax", "9000");
@@ -541,7 +541,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x80");
+                ledVib.write_value(LED_DEVICE "/gain", 153);
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
             case Effect::DOUBLE_CLICK:
@@ -549,14 +549,14 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x80");
+                ledVib.write_value(LED_DEVICE "/gain", 153);
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 usleep(100 * 1000);
                 ledVib.write_value(LED_DEVICE "/duration", "13");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x80");
+                ledVib.write_value(LED_DEVICE "/gain", 153);
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
             case Effect::HEAVY_CLICK:
@@ -564,7 +564,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x80");
+                ledVib.write_value(LED_DEVICE "/gain", 153);
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
             case Effect::TICK:
@@ -572,7 +572,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x80");
+                ledVib.write_value(LED_DEVICE "/gain", 153);
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
             case Effect::THUD:
@@ -588,7 +588,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x80");
+                ledVib.write_value(LED_DEVICE "/gain", 153);
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
             case Effect::TEXTURE_TICK:
@@ -596,7 +596,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
                 ledVib.write_value(LED_DEVICE "/vmax", "9000");
-                ledVib.write_value(LED_DEVICE "/gain", "0x7e");
+                ledVib.write_value(LED_DEVICE "/gain", "0x80");
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
             default:
