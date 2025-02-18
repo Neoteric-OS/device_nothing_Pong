@@ -231,9 +231,10 @@ PRODUCT_PACKAGES += \
     PongSettingsProvider \
     PongSystemUI
 
-# Paranoid Glyph
+# Glyph
 PRODUCT_PACKAGES += \
-    ParanoidGlyphPhone2
+    ParanoidGlyphPhone2 \
+    GlyphAdapter
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
