@@ -191,6 +191,18 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.2.vendor
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.mediaserver.64b.enable=true \
+    debug.stagefright.ccodec=4
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_codecs_cape.xml \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.media.recorder-max-base-layer-fps=60
+
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
@@ -267,7 +279,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
-    media \
     overlay \
     perf \
     telephony \
