@@ -203,6 +203,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
+PRODUCT_PACKAGES += \
+    libcodec2_shim    
+
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
