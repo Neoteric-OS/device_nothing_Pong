@@ -16,7 +16,7 @@ $(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
 
 PRODUCT_NAME := Pong
 PRODUCT_DEVICE := Pong
-PRODUCT_MANUFACTURER := nothing
+PRODUCT_MANUFACTURER := Nothing
 PRODUCT_BRAND := Nothing
 PRODUCT_MODEL := A065
 
