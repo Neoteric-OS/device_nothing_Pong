@@ -452,4 +452,7 @@
 
     <!-- The number of volume steps for the ring stream -->
     <integer name="config_audio_ring_vol_steps">16</integer>
+
+    <!-- Whether to enable fp unlock when screen turns off on udfps devices -->
+    <bool name="config_screen_off_udfps_enabled">true</bool>
 </resources>
