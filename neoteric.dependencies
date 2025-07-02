@@ -60,6 +60,12 @@
         "revision":     "udc-qpr2"
     },
     {
+        "remote":       "neoteric",
+        "repository":   "android_packages_apps_GlyphAdapter",
+        "target_path":  "packages/apps/GlyphAdapter",
+        "revision":     "vic"
+    },
+    {
         "remote":	"github",
         "repository":	"FlamingoOS-Devices/hardware_dolby",
         "target_path":	"hardware/dolby",
