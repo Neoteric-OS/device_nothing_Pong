@@ -75,6 +75,9 @@ function blob_fixup() {
         vendor/lib64/libqcodec2_core.so)
             grep -q "libcodec2_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
             ;;
+        vendor/lib64/nfc_nci_nxp_snxxx.so)
+            grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
