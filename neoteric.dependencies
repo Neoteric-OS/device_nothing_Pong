@@ -69,6 +69,6 @@
         "remote":	"github",
         "repository":	"FlamingoOS-Devices/hardware_dolby",
         "target_path":	"hardware/dolby",
-        "revision":	"A15"
+        "revision":	"A16"
     }
 ]
