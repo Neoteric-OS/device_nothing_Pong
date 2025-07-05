@@ -80,6 +80,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
+        vendor/lib64/libqcrilNr.so|vendor/lib64/libril-db.so)
+            [ "$2" = "" ] && return 0
+            sed -Ei 's/persist\.vendor\.radio\.poweron_opt/persist.vendor.radio.poweron_ign/g' "${2}"
+            ;;
         *)
             return 1
             ;;
