@@ -15,7 +15,7 @@
         "remote":       "neoteric",
         "repository":   "android_hardware_qcom_audio",
         "target_path":  "hardware/qcom-caf/sm8450/audio/primary-hal",
-        "revision":     "vic-8450"
+        "revision":     "bka-8450"
     },
     {
         "remote":       "neoteric",
