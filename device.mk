@@ -184,7 +184,13 @@ DEVICE_MANIFEST_FILE += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/media/media_codecs_cape_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_cape_vendor.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
@@ -200,9 +206,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.ccodec=4
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_codecs_cape.xml \
-    media.stagefright.thumbnail.prefer_hw_codecs=true \
-    ro.media.recorder-max-base-layer-fps=60
+    media.stagefright.thumbnail.prefer_hw_codecs=true
 
 PRODUCT_PACKAGES += \
     libcodec2_shim    
