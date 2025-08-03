@@ -20,6 +20,9 @@ PRODUCT_MANUFACTURER := Nothing
 PRODUCT_BRAND := Nothing
 PRODUCT_MODEL := A065
 
+# Declare updates support
+IS_OFFICIAL := true
+
 # Bootanimation resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
