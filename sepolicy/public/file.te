@@ -1,2 +1,3 @@
 # Charger
 type proc_charger, fs_type, proc_type;
+type proc_simulated_temp, fs_type, proc_type;

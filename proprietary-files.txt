@@ -1197,6 +1197,12 @@ vendor/lib64/vendor.nxp.nxpese@1.0.so
 vendor/lib64/vendor.nxp.nxpnfc@2.0.so
 vendor/libnfc-nxp_RF.conf
 
+# Nothing Charge
+vendor/bin/hw/vendor.noth.hardware.charge-service
+vendor/etc/init/vendor.noth.hardware.charge-service.rc
+vendor/etc/vintf/manifest/vendor.noth.hardware.charge-service.xml
+vendor/lib64/vendor.noth.hardware.charge-V1-ndk_platform.so
+
 # Peripheral Manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -1478,6 +1484,12 @@ vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
+# Sltntc
+system_ext/bin/sltntc
+system_ext/etc/init/sltntc.rc
+system_ext/etc/sltntc/sltntc.conf
+system_ext/etc/sltntc/sltntc_SM8475.conf
+
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
@@ -1584,8 +1596,17 @@ vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal Engine
 vendor/bin/thermal-engine-v2
+vendor/etc/advance_thermal_mitigation/atmc.json
+vendor/etc/advance_thermal_mitigation/atmc_ind.json
+vendor/etc/advance_thermal_mitigation/nt_boost_adjuster.xml
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/thermal-engine.conf
+vendor/etc/thermal.high.conf
+vendor/etc/thermal.low.conf
+vendor/etc/thermal.mid.conf
+vendor/etc/thermal.noth.camera.conf
+vendor/etc/thermal.super.conf
+vendor/etc/thermal.third.camera.conf
 vendor/lib64/libthermalclient.so
 
 # Time Services
