@@ -1478,6 +1478,12 @@ vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
+# Sltntc
+system_ext/bin/sltntc
+system_ext/etc/init/sltntc.rc
+system_ext/etc/sltntc/sltntc.conf
+system_ext/etc/sltntc/sltntc_SM8475.conf
+
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
