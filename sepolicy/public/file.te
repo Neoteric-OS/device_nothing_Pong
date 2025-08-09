@@ -1,5 +1,2 @@
 # Charger
 type proc_charger, fs_type, proc_type;
-
-# Charging control
-type nt_chg_recovery, domain, mlstrustedobject, coredomain;
