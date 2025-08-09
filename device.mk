@@ -82,11 +82,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.aon@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-# Charging
-PRODUCT_PACKAGES += \
-    nt-charging-control \
-    nt-charging-control_recovery
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
