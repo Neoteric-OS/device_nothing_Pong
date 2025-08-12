@@ -73,6 +73,9 @@ TARGET_MODULE_ALIASES += qca6490.ko:qca_cld3_qca6490.ko
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/qcom-battery/charging_en
 
+# Media
+TARGET_SUPPORTS_OMX_SERVICE := false
+
 # Partitions - A/B
 AB_OTA_PARTITIONS += \
     boot \
