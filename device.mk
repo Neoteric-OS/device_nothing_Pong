@@ -188,20 +188,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
+    libavservices_minijail.vendor \
     libcodec2_hidl@1.2.vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
+    libcodec2_soft_common.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor
-
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.mediaserver.64b.enable=true \
-    debug.stagefright.ccodec=4
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    media.stagefright.thumbnail.prefer_hw_codecs=true
 
 PRODUCT_PACKAGES += \
     libcodec2_shim    

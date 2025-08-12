@@ -8,6 +8,20 @@ vendor.camera.aux.packagelist=org.lineageos.aperture
 # Display
 sys.brightness.disable_gamma_conversion=true
 
+# Media
+media.aac_51_output_enabled=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+mmp.enable.3g2=true
+persist.mm.enable.prefetch=true
+qcom.hw.aac.encoder=true
+ro.media.recorder-max-base-layer-fps=60
+
 # Netmgr
 persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096

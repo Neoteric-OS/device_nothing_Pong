@@ -57,8 +57,10 @@ ro.incremental.enable=yes
 ro.hardware.keystore_desede=true
 
 # Media
+debug.stagefright.ccodec=4
+debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
-vendor.media.omx=0
+ro.mediaserver.64b.enable=true
 
 # Netflix
 ro.netflix.bsp_rev=Q8450-34634-1
