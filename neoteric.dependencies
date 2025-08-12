@@ -9,7 +9,7 @@
         "remote":       "neoteric",
         "repository":   "vendor_nothing_Pong",
         "target_path":  "vendor/nothing/Pong",
-        "revision":     "vic"
+        "revision":     "bka"
     },
     {
         "remote":       "neoteric",
@@ -39,7 +39,7 @@
         "remote":       "neoteric",
         "repository":   "android_hardware_qcom_display",
         "target_path":  "hardware/qcom-caf/sm8450/display",
-        "revision":     "vic-8450"
+        "revision":     "bka-8450"
     },
     {
         "remote":       "aospa",
