@@ -11,5 +11,7 @@ ro.config.system_vol_steps=16
 persist.vendor.bluetooth.modem_nv_support=true
 
 # Display
+debug.sf.enable_hwc_vds=0
+persist.sys.sf.color_mode=0
 vendor.display.enable_rounded_corner=0
 vendor.display.vds_allow_hwc=1
