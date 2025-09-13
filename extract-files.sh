@@ -84,6 +84,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -Ei 's/persist\.vendor\.radio\.poweron_opt/persist.vendor.radio.poweron_ign/g' "${2}"
             ;;
+        vendor/etc/audio/sku_cape/resourcemanager_waipio_qrd.xml)
+            [ "$2" = "" ] && return 0
+            sed -Ei 's#<speaker_protection_enabled>1</speaker_protection_enabled>#<speaker_protection_enabled>0</speaker_protection_enabled>#' "${2}"
+            ;;
         *)
             return 1
             ;;
