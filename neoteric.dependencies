@@ -21,7 +21,7 @@
         "remote":       "neoteric",
         "repository":   "android_vendor_qcom_opensource_arpal-lx",
         "target_path":  "hardware/qcom-caf/sm8450/audio/pal",
-        "revision":     "vic-8450"
+        "revision":     "bka-8450"
     },
     {
         "remote":       "neoteric",
