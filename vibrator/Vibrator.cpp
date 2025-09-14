@@ -430,12 +430,12 @@ int LedVibratorDevice::setAmplitude(float amplitude) {
     if (mTimeoutMs < 101) {
         ret |= write_value(LED_DEVICE "/index", "1");
         ret |= write_value(LED_DEVICE "/loop", "0 0");
-        ret |= write_value(LED_DEVICE "/vmax", "9000");
+        ret |= write_value(LED_DEVICE "/vmax", "10312");
         ret |= write_value(LED_DEVICE "/gain", gain);
         ret |= write_value(LED_DEVICE "/brightness", "1");
     } else {
         ret |= write_value(LED_DEVICE "/index", "4");
-        ret |= write_value(LED_DEVICE "/vmax", "9000");
+        ret |= write_value(LED_DEVICE "/vmax", "11437");
         ret |= write_value(LED_DEVICE "/gain", "0x80");
         ret |= write_value(LED_DEVICE "/activate", "1");
     }
@@ -535,7 +535,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "10");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "8500");
+                ledVib.write_value(LED_DEVICE "/vmax", "9812");
                 ledVib.write_value(LED_DEVICE "/gain", "128");
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
@@ -543,14 +543,14 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "10");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "8500");
+                ledVib.write_value(LED_DEVICE "/vmax", "9812");
                 ledVib.write_value(LED_DEVICE "/gain", "128");
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 usleep(100 * 1000);
                 ledVib.write_value(LED_DEVICE "/duration", "10");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "8500");
+                ledVib.write_value(LED_DEVICE "/vmax", "9812");
                 ledVib.write_value(LED_DEVICE "/gain", "128");
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
@@ -558,7 +558,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "16");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "9000");
+                ledVib.write_value(LED_DEVICE "/vmax", "10312");
                 ledVib.write_value(LED_DEVICE "/gain", "128");
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
@@ -566,7 +566,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "6");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "8000");
+                ledVib.write_value(LED_DEVICE "/vmax", "9312");
                 ledVib.write_value(LED_DEVICE "/gain", "100");  // Softer feel
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
@@ -574,7 +574,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "14");
                 ledVib.write_value(LED_DEVICE "/index", "4");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "9000");
+                ledVib.write_value(LED_DEVICE "/vmax", "10312");
                 ledVib.write_value(LED_DEVICE "/gain", "110");  // Slightly lower than heavy click
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
@@ -582,7 +582,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "9");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "8700");
+                ledVib.write_value(LED_DEVICE "/vmax", "10012");
                 ledVib.write_value(LED_DEVICE "/gain", "120");  // Between CLICK and HEAVY_CLICK
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
@@ -590,7 +590,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                 ledVib.write_value(LED_DEVICE "/duration", "5");
                 ledVib.write_value(LED_DEVICE "/index", "1");
                 ledVib.write_value(LED_DEVICE "/loop", "0 0");
-                ledVib.write_value(LED_DEVICE "/vmax", "7800");
+                ledVib.write_value(LED_DEVICE "/vmax", "9112");
                 ledVib.write_value(LED_DEVICE "/gain", "90");  // Softest response
                 ledVib.write_value(LED_DEVICE "/brightness", "1");
                 break;
